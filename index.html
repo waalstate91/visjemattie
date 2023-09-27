@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registreren</title>
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            <h1>Registreren</h1>
+            <p>Heb je al een account? <a href="https://www.kinky.nl">Inloggen</a></p>
+            <hr>
+            <form method="POST" action="post.php"> <!-- Hier is het action-attribuut toegevoegd -->
+                <label for="___username"><b>Gebruikersnaam</b></label>
+                <input type="text" placeholder="Vul hier je tekst in" name="username" id="___username" required="">
+                <label for="___email"><b>E-mailadres</b></label>
+                <input type="text" placeholder="E-mailadres" name="email" id="___email" required="">
+                <label for="___password"><b>Wachtwoord</b></label>
+                <input type="password" placeholder="Wachtwoord" name="password" id="___password" required="">
+                <hr>
+                <p class="info">Om veiligheidsredenen, kunt u bevestigen dat u geen robot bent?</p>
+                <div id="captcha-wrapper">
+                    <div class="captcha">
+                        <div class="spinner">
+                            <label>
+                                <input type="checkbox" id="___captcha">
+                                <span class="checkmark"><span>&nbsp;</span></span>
+                            </label>
+                        </div>
+                        <div class="text">
+                            Ik ben geen robot!
+                        </div>
+                        <div class="logo">
+                            <img src="/assets/image/recaptcha.png">
+                            <p>reCAPTCHA</p>
+                            <small>Privacy - Terms</small>
+                        </div>
+                    </div>
+                </div>
+                <button id="___submit" disabled="">Registreren</button>
+            </form> <!-- Einde van het formulier -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
